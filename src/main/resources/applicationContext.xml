@@ -4,8 +4,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
     <!-- We will define our beans here : -->
-    <bean id="wizzard" class="fr.wildcodeschool.thewizardproject.models.Dumbledore">
+    <bean id="wizzardGandalf" class="fr.wildcodeschool.thewizardproject.models.Gandalf">
+        <constructor-arg ref="outfit"/>
+    </bean>
+
+    <bean id="wizzardDumbledore" class="fr.wildcodeschool.thewizardproject.models.Dumbledore">
+        <constructor-arg ref="outfit"/>
+    </bean>
+
+    <!-- Bean of the dependency -->
+    <bean id="outfit" class="fr.wildcodeschool.thewizardproject.models.Outfit">
     </bean>
 </beans>
